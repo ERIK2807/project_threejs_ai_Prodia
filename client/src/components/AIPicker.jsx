@@ -1,7 +1,12 @@
 import React from 'react'
+<<<<<<< HEAD
 import CustomButton from './CustomButton';
 // import saveImage from '../config/saveImage';
 
+=======
+
+import CustomButton from './CustomButton';
+>>>>>>> nueva-rama
 
 const AIPicker = ({ prompt, setPrompt, generatingImg, handleSubmit }) => {
   return (
@@ -12,7 +17,11 @@ const AIPicker = ({ prompt, setPrompt, generatingImg, handleSubmit }) => {
         value={prompt}
         onChange={(e) => setPrompt(e.target.value)}
         className="aipicker-textarea"
+<<<<<<< HEAD
         />
+=======
+      />
+>>>>>>> nueva-rama
       <div className="flex flex-wrap gap-3">
         {generatingImg ? (
           <CustomButton 
@@ -35,11 +44,14 @@ const AIPicker = ({ prompt, setPrompt, generatingImg, handleSubmit }) => {
               handleClick={() => handleSubmit('full')}
               customStyles="text-xs"
             />
+<<<<<<< HEAD
             {/* <CustomButton 
               title="Descargar"
               handleClick={saveImage}
               customStyles="text-xs"
             /> */}
+=======
+>>>>>>> nueva-rama
           </>
         )}
       </div>

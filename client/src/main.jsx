@@ -5,6 +5,10 @@ import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+<<<<<<< HEAD
     <App/>
+=======
+    <App />
+>>>>>>> nueva-rama
   </React.StrictMode>,
 )

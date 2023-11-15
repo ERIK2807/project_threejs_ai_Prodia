@@ -1,6 +1,12 @@
 # Build and Deploy an AI-Powered 3D Website Using React | 2023 Three JS Course Tutorial for Beginners
 ![3D Website](https://i.ibb.co/Krk39Cf/Thumbnali.png)
 
+<<<<<<< HEAD
+=======
+### [🌟 Become a top 1% Next.js 13 developer in only one course](https://jsmastery.pro/next13)
+### [🚀 Land your dream programming job in 6 months](https://jsmastery.pro/masterclass)
+
+>>>>>>> nueva-rama
 ## Introduction
 Many large corporations already use 3D graphics to showcase their products. Learn how to build your own ThreeJS 3D product website and infuse it with the power of artificial intelligence! 
  
@@ -18,6 +24,13 @@ You'll also learn how to:
 - Download the resulting t-shirt model image
 - Ensure responsiveness across all devices and improve your site's performance
 
+<<<<<<< HEAD
+=======
+## Want to learn more? Check out Anderson Mancini's Course
+This video covers only a small part of what's included in [Anderson Mancini's Udemy Course](https://www.udemy.com/course/react-three-fiber-configurator/). Go check it out 🔥
+
+
+>>>>>>> nueva-rama
 ## Want to land your dream programming job in 3 - 6 months?
 ⭐ JSM Masterclass Experience - https://jsmastery.pro/masterclass
 Become a Software Engineer. Guaranteed.

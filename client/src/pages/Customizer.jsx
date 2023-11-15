@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useSnapshot } from 'valtio';
 
+<<<<<<< HEAD
 import state from '../store';
 import { download } from '../assets';
 import { downloadCanvasToImage, reader } from '../config/helpers';
@@ -10,6 +11,15 @@ import { fadeAnimation, slideAnimation } from '../config/motion';
 import { AIPicker, ColorPicker, CustomButton, FilePicker, Tab } from '../components';
 import { peticionprodia } from '../components/peticionprodia';
 
+=======
+import config from '../config/config';
+import state from '../store';
+import { download } from '../assets';
+import { downloadCanvasToImage, reader } from '../config/helpers';
+import { EditorTabs, FilterTabs, DecalTypes } from '../config/constants';
+import { fadeAnimation, slideAnimation } from '../config/motion';
+import { AIPicker, ColorPicker, CustomButton, FilePicker, Tab } from '../components';
+>>>>>>> nueva-rama
 
 const Customizer = () => {
   const snap = useSnapshot(state);
@@ -25,6 +35,7 @@ const Customizer = () => {
     stylishShirt: false,
   })
 
+<<<<<<< HEAD
 
 // *****************
   // Descargar imagen codificada en base64,Separar el encabezado de la imagen (data:image/png;base64,) del contenido de la imagen en Base64
@@ -62,6 +73,8 @@ let imagenBase64 = snap.logoDecal.split(',')[1];
   // // *****************
 
 
+=======
+>>>>>>> nueva-rama
   // show tab content depending on the activeTab
   const generateTabContent = () => {
     switch (activeEditorTab) {
@@ -85,6 +98,7 @@ let imagenBase64 = snap.logoDecal.split(',')[1];
     }
   }
 
+<<<<<<< HEAD
 // capturar imagen prodia
 const handleSubmit = async(type)=>{
   setGeneratingImg(true);
@@ -106,6 +120,34 @@ const convertBlobToBase64 = (blob) => {
     reader.readAsDataURL(blob);
   });
 };
+=======
+  const handleSubmit = async (type) => {
+    if(!prompt) return alert("Please enter a prompt");
+
+    try {
+      setGeneratingImg(true);
+
+      const response = await fetch('http://localhost:8080/api/v1/dalle', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          prompt,
+        })
+      })
+
+      const data = await response.json();
+
+      handleDecals(type, `data:image/png;base64,${data.photo}`)
+    } catch (error) {
+      alert(error)
+    } finally {
+      setGeneratingImg(false);
+      setActiveEditorTab("");
+    }
+  }
+>>>>>>> nueva-rama
 
   const handleDecals = (type, result) => {
     const decalType = DecalTypes[type];
@@ -123,7 +165,11 @@ const convertBlobToBase64 = (blob) => {
           state.isLogoTexture = !activeFilterTab[tabName];
         break;
       case "stylishShirt":
+<<<<<<< HEAD
           // state.isFullTexture = !activeFilterTab[tabName];
+=======
+          state.isFullTexture = !activeFilterTab[tabName];
+>>>>>>> nueva-rama
         break;
       default:
         state.isLogoTexture = true;
@@ -159,8 +205,12 @@ const convertBlobToBase64 = (blob) => {
             {...slideAnimation('left')}
           >
             <div className="flex items-center min-h-screen">
+<<<<<<< HEAD
               <
                 div className="editortabs-container tabs">
+=======
+              <div className="editortabs-container tabs">
+>>>>>>> nueva-rama
                 {EditorTabs.map((tab) => (
                   <Tab 
                     key={tab.name}
@@ -180,7 +230,11 @@ const convertBlobToBase64 = (blob) => {
           >
             <CustomButton 
               type="filled"
+<<<<<<< HEAD
               title="Volver"
+=======
+              title="Go Back"
+>>>>>>> nueva-rama
               handleClick={() => state.intro = true}
               customStyles="w-fit px-4 py-2.5 font-bold text-sm"
             />
@@ -199,6 +253,7 @@ const convertBlobToBase64 = (blob) => {
                 handleClick={() => handleActiveFilterTab(tab.name)}
               />
             ))}
+<<<<<<< HEAD
             {DownldTabs.map((tab) => (
               <Tab
                 key={tab.name}
@@ -210,10 +265,17 @@ const convertBlobToBase64 = (blob) => {
             onClick={downImgIA}
             >DescargarIA</button> */}
           </motion.div>     
+=======
+          </motion.div>
+>>>>>>> nueva-rama
         </>
       )}
     </AnimatePresence>
   )
 }
 
+<<<<<<< HEAD
 export default Customizer  
+=======
+export default Customizer
+>>>>>>> nueva-rama

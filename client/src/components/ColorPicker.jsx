@@ -1,6 +1,12 @@
 import React from 'react'
+<<<<<<< HEAD
 import { CirclePicker} from 'react-color'
 import { useSnapshot } from 'valtio'
+=======
+import { SketchPicker } from 'react-color'
+import { useSnapshot } from 'valtio'
+
+>>>>>>> nueva-rama
 import state from '../store';
 
 const ColorPicker = () => {
@@ -8,6 +14,7 @@ const ColorPicker = () => {
 
   return (
     <div className="absolute left-full ml-3">
+<<<<<<< HEAD
       <CirclePicker
               color={snap.color}
               colors={[
@@ -22,6 +29,13 @@ const ColorPicker = () => {
               ]}
               onChange={(color) => state.color = color.hex}
       />      
+=======
+      <SketchPicker 
+        color={snap.color}
+        disableAlpha
+        onChange={(color) => state.color = color.hex}
+      />
+>>>>>>> nueva-rama
     </div>
   )
 }

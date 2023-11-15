@@ -2,11 +2,17 @@ import React, { useRef } from 'react'
 import { easing } from 'maath'
 import { useFrame } from '@react-three/fiber'
 import { AccumulativeShadows, RandomizedLight } from '@react-three/drei';
+<<<<<<< HEAD
 import state from '../store';
 
 const Backdrop = () => {
   const shadows = useRef();
   useFrame((state, delta) => easing.dampC(shadows.current.getMesh().material.color, state.color, 0.25, delta));
+=======
+
+const Backdrop = () => {
+  const shadows = useRef();
+>>>>>>> nueva-rama
 
   return (
     <AccumulativeShadows

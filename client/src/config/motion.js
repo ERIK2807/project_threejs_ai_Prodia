@@ -16,7 +16,11 @@ export const slideAnimation = (direction) => {
     },
     exit: {
       x: direction === "left" ? -100 : direction === "right" ? 100 : 0,
+<<<<<<< HEAD
       y: direction === "up" ? 100 : direction === "down" ? -150 : 0,
+=======
+      y: direction === "up" ? 100 : direction === "down" ? -100 : 0,
+>>>>>>> nueva-rama
       transition: { ...transition, delay: 0 },
     },
   };

@@ -28,7 +28,11 @@ html {
 }
 
 .head-text {
+<<<<<<< HEAD
   @apply xl:text-[6rem] text-[3rem] xl:leading-[6rem] leading-[6rem] font-black text-gray-700 ;
+=======
+  @apply xl:text-[10rem] text-[6rem] xl:leading-[11rem] leading-[7rem] font-black text-black;
+>>>>>>> nueva-rama
 }
 
 .download-btn {

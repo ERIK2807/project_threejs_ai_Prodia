@@ -1,7 +1,11 @@
 import React from 'react'
 
 import CustomButton from './CustomButton'
+<<<<<<< HEAD
 // Console.log("Hello")
+=======
+
+>>>>>>> nueva-rama
 const FilePicker = ({ file, setFile, readFile }) => {
   return (
     <div className="filepicker-container">
@@ -11,6 +15,7 @@ const FilePicker = ({ file, setFile, readFile }) => {
           type="file"
           accept="image/*"
           onChange={(e) => setFile(e.target.files[0])}
+<<<<<<< HEAD
           
         />
         <label htmlFor="file-upload" className="filepicker-label">
@@ -19,6 +24,15 @@ const FilePicker = ({ file, setFile, readFile }) => {
         
         <p className="mt-2 text-gray-500 truncate">
           {file === '' ? `No se ha seleccionado un archivo` : file.name}
+=======
+        />
+        <label htmlFor="file-upload" className="filepicker-label">
+          Upload File
+        </label>
+
+        <p className="mt-2 text-gray-500 text-xs truncate">
+          {file === '' ? "No file selected" : file.name}
+>>>>>>> nueva-rama
         </p>
       </div>
 
@@ -39,4 +53,8 @@ const FilePicker = ({ file, setFile, readFile }) => {
     </div>
   )
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> nueva-rama
 export default FilePicker

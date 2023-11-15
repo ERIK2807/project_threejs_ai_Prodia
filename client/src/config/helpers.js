@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 import { useSnapshot } from "valtio";
 
 export const downloadCanvasToImage = (imagenBase64) => {
+=======
+export const downloadCanvasToImage = () => {
+>>>>>>> nueva-rama
   const canvas = document.querySelector("canvas");
   const dataURL = canvas.toDataURL();
   const link = document.createElement("a");
@@ -9,6 +13,7 @@ export const downloadCanvasToImage = (imagenBase64) => {
   link.download = "canvas.png";
   document.body.appendChild(link);
   link.click();
+<<<<<<< HEAD
   document.body.removeChild(link);  
   downImgIA(imagenBase64);
 };
@@ -54,6 +59,16 @@ export const reader = (file) =>
     fileReader.onload = () => resolve(fileReader.result);
     fileReader.readAsDataURL(file);
     // console.log('despues',fileReader)
+=======
+  document.body.removeChild(link);
+};
+
+export const reader = (file) =>
+  new Promise((resolve, reject) => {
+    const fileReader = new FileReader();
+    fileReader.onload = () => resolve(fileReader.result);
+    fileReader.readAsDataURL(file);
+>>>>>>> nueva-rama
   });
 
 export const getContrastingColor = (color) => {
